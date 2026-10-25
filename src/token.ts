@@ -3,17 +3,21 @@
  * token.ts — Defines the building blocks of Alloy's source code.
  */
 
+
 export type TokenKind =
   | "PRINT"
   | "NUMBER"
   | "STRING"
+  | "IDENTIFIER"
   | "PLUS"
+  | "MINUS"
+  | "STAR"
+  | "SLASH"
   | "LEFT_PAREN"
   | "RIGHT_PAREN"
-  | "SEMICOLON";
+  | "SEMICOLON"
+  | "EOF";
 
-
-// export woo hoo!
 export interface Token {
   kind: TokenKind;
   value: string;
